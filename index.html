@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Loopstudios landing page</title>
+  </head>
+  <body>
+    <div class="home">
+      <header>
+        <section class="header-logo">
+          <div class="logo">
+            <a href="#">
+              <img id="logo" src="images/logo.svg" alt="Logo">
+            </a>
+          </div>
+        </section>
+        <section class="header-nav" id="header-nav">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Events</a>
+              </li>
+              <li>
+                <a href="#">Products</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <div id="menu-icon" onclick="toggleMenu()">
+          <img src="images/icon-hamburger.svg" alt="Menu icon">
+          <!-- Menu icon on a mobile screen -->
+        </div>
+      </header>
+      <div class="home-text">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+    </div>
+    <section class="about-us">
+      <div class="img">
+        <img src="images/desktop/image-interactive.jpg">
+      </div>
+      <div class="text">
+        <h2>The leader in interactive VR</h2>
+        <p> Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
+      </div>
+    </section>
+    <section class="creations">
+      <div class="creations-header">
+        <h2>Our creations</h2>
+        <a href="#">
+          <button>See all</button>
+        </a>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Deep <br>earth </h3>
+        </div>
+        <div class="grid-item">
+          <h3>Night <br>arcade </h3>
+        </div>
+        <div class="grid-item">
+          <h3>Soccer <br>team VR </h3>
+        </div>
+        <div class="grid-item">
+          <h3>The <br>grid </h3>
+        </div>
+        <div class="grid-item">
+          <h3>From up <br>above VR </h3>
+        </div>
+        <div class="grid-item">
+          <h3>Pocket <br>borealis </h3>
+        </div>
+        <div class="grid-item">
+          <h3>The <br>curiosity </h3>
+        </div>
+        <div class="grid-item">
+          <h3>Make it <br>fisheye </h3>
+        </div>
+    </section>
+    <footer>
+      <div class="footer-links">
+        <img id="logo" src="images/logo.svg" alt="Logo">
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">Support</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <div class="social">
+          <a href="#">
+            <img src="images/icon-facebook.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="images/icon-twitter.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="images/icon-pinterest.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="images/icon-instagram.svg" alt="">
+          </a>
+        </div>
+        <p id="footer-parag">© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </footer>
+    <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Ahmad Abbani.</a>. </div>
+  
+<!-- JavaScript code for toggling the menu on a mobile screen -->
+<script>
+   function toggleMenu() {
+  var menu = document.getElementById("header-nav");
+   var menuicon = document.getElementById("menu-icon")
+
+// Check both the inline style and computed style
+var isNavHidden = window.getComputedStyle(menu, null).getPropertyValue("display") === "none" || menu.style.display === "none";
+  if (isNavHidden) {
+    menu.style.display = "flex";
+    setTimeout(function () {
+        menu.classList.add('nav-visible'); // Add the class after a short delay
+      }, 10);
+    menuicon.innerHTML = '<img src="images/icon-close.svg" alt="Close icon">'; // Close icon
+  } else {
+    setTimeout(function () {
+        menu.style.display = "none";
+      }, 1000); // Adjust the delay to match your CSS transition duration
+      menu.classList.remove('nav-visible'); // Remove the class after a short delay
+    menuicon.innerHTML ='<img src="images/icon-hamburger.svg" alt="Menu icon">'; // Menu icon 
+  }
+}
+</script>
+</body>
+</html>
