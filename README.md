@@ -10,7 +10,7 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Links
 
-- Solution URL: https://ahmadabbani.github.io/loopstudios-landing-page-main/
+- Solution URL :https://www.frontendmentor.io/solutions/responsive-loop-studios-landing-page-hhQAlvphAx
 
 ### Built with
 
